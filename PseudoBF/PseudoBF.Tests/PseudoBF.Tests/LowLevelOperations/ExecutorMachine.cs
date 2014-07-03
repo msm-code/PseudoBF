@@ -63,5 +63,7 @@ namespace PseudoBF.Tests.LowLevelOperations
         public void EndConditional()
         { underlying.EndConditional(); }
         #endregion
+
+        public void Comment(string format, params object[] args) { }
     }
 }

@@ -54,10 +54,12 @@
     <Compile Include="Builtins\PutBuiltin.cs" />
     <Compile Include="CodeDom\CodeBlock.cs" />
     <Compile Include="CodeDom\CustomSubroutine.cs" />
+    <Compile Include="CodeDom\Number.cs" />
     <Compile Include="CodeDom\ProgramModel.cs" />
     <Compile Include="CodeDom\Statement.cs" />
     <Compile Include="CodeDom\Subroutine.cs" />
     <Compile Include="CodeDom\Values.cs" />
+    <Compile Include="CodeDom\VariableName.cs" />
     <Compile Include="CodeInfrastructure\CharData.cs" />
     <Compile Include="CodeInfrastructure\StackContext.cs" />
     <Compile Include="CodeInfrastructure\StackFrame.cs" />

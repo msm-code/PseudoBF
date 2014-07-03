@@ -73,5 +73,11 @@ namespace PseudoBF.Compilation
             this.location = 0;
             builder = new StringBuilder();
         }
+
+        public void Comment(string format, params object[] args)
+        {
+            bool clear = builder.Length == 0 || builder[builder.Length - 1] == '\n';
+            builder.Append((clear ? "" : "\n") + string.Format(format, args) + "\n");
+        }
     }
 }
