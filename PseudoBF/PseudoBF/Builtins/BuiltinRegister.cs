@@ -14,11 +14,11 @@ namespace PseudoBF.Builtins
         {
             builtins = new List<BuiltinSubroutine>();
 
-            builtins.Add(new BuiltinSubroutine(SubroutineType.Function, (p, s) => new AddBuiltin(p[0], p[1], s),
+            builtins.Add(new BuiltinSubroutine((p, s) => new AddBuiltin(p[0], p[1], s),
                 "+", "var1", "var2"));
-            builtins.Add(new BuiltinSubroutine(SubroutineType.Procedure, (p, s) => new PutBuiltin(p[0], s),
+            builtins.Add(new BuiltinSubroutine((p, s) => new PutBuiltin(p[0], s),
                 "put", "charecterToPrint"));
-            builtins.Add(new BuiltinSubroutine(SubroutineType.Function, (p, s) => new EqualsBuiltin(p[0], p[1], s),
+            builtins.Add(new BuiltinSubroutine((p, s) => new EqualsBuiltin(p[0], p[1], s),
                 "==", "var1", "var2"));
         }
 

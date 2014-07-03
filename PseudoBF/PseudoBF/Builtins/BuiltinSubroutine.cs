@@ -4,6 +4,7 @@ using System.Linq;
 using PseudoBF.Compilation.Operations;
 using System;
 using PseudoBF.CodeInfrastructure;
+using PseudoBF.Compilation;
 
 namespace PseudoBF.Builtins
 {
@@ -13,21 +14,22 @@ namespace PseudoBF.Builtins
 
         private GetOpeartion operationGetter;
 
-        public BuiltinSubroutine(SubroutineType type, GetOpeartion operation,
+        public BuiltinSubroutine(GetOpeartion operation,
             string name, params string[] variableNames)
-            : base(type, name, variableNames.Select((var) => new VariableName(var)).ToList()) 
+            : base(name, variableNames.Select((var) => new VariableName(var)).ToList()) 
         {
             this.operationGetter = operation;
-        }
-
-        public override ImplementationType ImplType
-        {
-            get { return ImplementationType.External; }
         }
 
         public IOperation Operation(List<IValueProvider> variables, StackFrame stack)
         {
             return operationGetter(variables, stack);
+        }
+
+        public override void Compile(CompilerContext compiler, List<IValueProvider> parameters)
+        {
+            IOperation bltin = BuiltinRegister.Get(Name, parameters, compiler.Stack.CurrentFrame);
+            bltin.Execute(compiler.Executor);
         }
     }
 }

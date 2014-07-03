@@ -46,33 +46,44 @@
   </Target>
   -->
   <ItemGroup>
+    <Compile Include="Builtins\AddBuiltin.cs" />
+    <Compile Include="Builtins\BuiltinRegister.cs" />
+    <Compile Include="Builtins\BuiltinSubroutine.cs" />
+    <Compile Include="Builtins\EqualsBuiltin.cs" />
+    <Compile Include="Builtins\IOperation.cs" />
+    <Compile Include="Builtins\PutBuiltin.cs" />
+    <Compile Include="CodeDom\ProgramModel.cs" />
+    <Compile Include="CodeDom\Statement.cs" />
+    <Compile Include="CodeDom\Subroutine.cs" />
+    <Compile Include="CodeDom\Values.cs" />
+    <Compile Include="CodeInfrastructure\CharData.cs" />
+    <Compile Include="CodeInfrastructure\StackContext.cs" />
+    <Compile Include="CodeInfrastructure\StackFrame.cs" />
+    <Compile Include="Compilation\Compiler.cs" />
+    <Compile Include="Compilation\CompilerContext.cs" />
+    <Compile Include="Compilation\CompilerMachine.cs" />
+    <Compile Include="Compilation\HighLevelActionPolicies.cs" />
+    <Compile Include="Compilation\IfHelper.cs" />
+    <Compile Include="LowLevelActions\ConditionalExecutionActions.cs" />
+    <Compile Include="LowLevelActions\PrimitiveActions.cs" />
+    <Compile Include="MachineModel\HeadPosition.cs" />
+    <Compile Include="MachineModel\IMachine.cs" />
+    <Compile Include="Parsing\AntlrWrapper.cs" />
+    <Compile Include="Parsing\AssemblyInfo.cs" />
+    <Compile Include="Parsing\grammar\output\PseudoBFLexer.cs" />
+    <Compile Include="Parsing\grammar\output\PseudoBFParser.cs" />
+    <Compile Include="Parsing\IParser.cs" />
+    <Compile Include="Parsing\LocalSyntaxWrappers.cs" />
+    <Compile Include="Parsing\ParserFactory.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Downloads\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PseudoBF.CodeDom\PseudoBF.CodeDom\PseudoBF.CodeDom.csproj">
-      <Project>{72E427F3-F25F-498E-BD64-CBC79576E13E}</Project>
-      <Name>PseudoBF.CodeDom</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PseudoBF.Compilation\PseudoBF.Compilation\PseudoBF.Compilation.csproj">
-      <Project>{375BEF85-D5DA-4181-92AC-7A7D50C20237}</Project>
-      <Name>PseudoBF.Compilation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PseudoBF.Parsing\PseudoBF.Parsing\PseudoBF.Parsing.csproj">
-      <Project>{FF936BEC-85BF-4350-9895-2E70E33AB36C}</Project>
-      <Name>PseudoBF.Parsing</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PseudoBF.Builtins\PseudoBF.Builtins.csproj">
-      <Project>{4004B6ED-1DB4-4C90-B4AE-3FBD3AC7C128}</Project>
-      <Name>PseudoBF.Builtins</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PseudoBF.MachineModel\PseudoBF.MachineModel.csproj">
-      <Project>{1C37359A-E9F5-403F-AF41-6041404C280E}</Project>
-      <Name>PseudoBF.MachineModel</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>

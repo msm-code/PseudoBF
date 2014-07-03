@@ -25,13 +25,11 @@ namespace PseudoBF.Parsing
 
                 case PseudoBFParser.SUBROUTINE_IMAG:
                 {
-                    SubroutineType subroutineType = (SubroutineType)
-                        Enum.Parse(typeof(SubroutineType), node.GetChild(0).Text, true);
                     string id = node.GetChild(1).Text;
                     VariableList argList = (VariableList)GetProgramElement(node.GetChild(2));
                     VariableList locals = (VariableList)GetProgramElement(node.GetChild(3));
                     CodeBlock code = (CodeBlock)GetProgramElement(node.GetChild(4));
-                    return new CustomSubroutine(subroutineType, id, argList.Arguments, locals.Arguments, code);
+                    return new CustomSubroutine(id, argList.Arguments, locals.Arguments, code);
                 }
 
                 case PseudoBFParser.VARS_IMAG:

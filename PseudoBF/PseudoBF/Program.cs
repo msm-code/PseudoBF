@@ -25,6 +25,7 @@ function foo(znak) {
 }
 
 function main() : locals(a, b) {
+    a = 70;
     b = a + 1;
 
     foo(b);

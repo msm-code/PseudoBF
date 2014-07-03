@@ -21,14 +21,14 @@
             {
                 switch (code[i])
                 {
-                    case '-': { bytes[headLoc] = unchecked((byte)(bytes[headLoc] - 1)); break; }
-                    case '+': { bytes[headLoc] = unchecked((byte)(bytes[headLoc] + 1)); break; }
-                    case '<': { headLoc--; break; }
-                    case '>': { headLoc++; break; }
-                    case '[': { if (bytes[headLoc] == 0) { i = FindLoopEnd(code, i, Direction.Forward); } break; }
-                    case ']': { if (bytes[headLoc] != 0) { i = FindLoopEnd(code, i, Direction.Backward); } break; }
-                    case ',': { IoReadChar(headLoc); break; }
-                    case '.': { IoPutChar(headLoc); break; }
+                    case '-': bytes[headLoc] = unchecked((byte)(bytes[headLoc] - 1)); break;
+                    case '+': bytes[headLoc] = unchecked((byte)(bytes[headLoc] + 1)); break;
+                    case '<': headLoc--; break;
+                    case '>': headLoc++; break;
+                    case '[': if (bytes[headLoc] == 0) { i = FindLoopEnd(code, i, Direction.Forward); } break;
+                    case ']': if (bytes[headLoc] != 0) { i = FindLoopEnd(code, i, Direction.Backward); } break;
+                    case ',': IoReadChar(headLoc); break;
+                    case '.': IoPutChar(headLoc); break;
                 }
             }
         }

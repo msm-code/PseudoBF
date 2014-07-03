@@ -1,20 +1,19 @@
 ﻿using PseudoBF.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
+using PseudoBF.Compilation;
 
 namespace PseudoBF.Tests.BuiltinFunctions
 {
     class MockSubroutine : Subroutine
     {
-        public MockSubroutine(SubroutineType type, string name, List<VariableName> parameters)
-            : base(type, name, parameters) { }
-
-        public override ImplementationType ImplType
-        {
-            get { return ImplementationType.External; }
-        }
+        public MockSubroutine(string name, List<VariableName> parameters)
+            : base(name, parameters) { }
 
         public static Subroutine Empty
-        { get { return new MockSubroutine(SubroutineType.Function, "MockSubroutine", new List<VariableName>()); } }
+        { get { return new MockSubroutine("MockSubroutine", new List<VariableName>()); } }
+
+        public override void Compile(CompilerContext compiler, List<IValueProvider> parameters)
+        { throw new System.NotImplementedException(); }
     }
 }

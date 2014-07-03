@@ -70,37 +70,13 @@
     <Compile Include="Parsing\ParserTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PseudoBF.CodeDom\PseudoBF.CodeDom\PseudoBF.CodeDom.csproj">
-      <Project>{72E427F3-F25F-498E-BD64-CBC79576E13E}</Project>
-      <Name>PseudoBF.CodeDom</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PseudoBF.Compilation\PseudoBF.Compilation\PseudoBF.Compilation.csproj">
-      <Project>{375BEF85-D5DA-4181-92AC-7A7D50C20237}</Project>
-      <Name>PseudoBF.Compilation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PseudoBF.Parsing\PseudoBF.Parsing\PseudoBF.Parsing.csproj">
-      <Project>{FF936BEC-85BF-4350-9895-2E70E33AB36C}</Project>
-      <Name>PseudoBF.Parsing</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Brainfuck\Brainfuck.csproj">
       <Project>{8189DAAF-51F4-40EC-99CA-A03392CE2AC7}</Project>
       <Name>Brainfuck</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\PseudoBF.Builtins\PseudoBF.Builtins.csproj">
-      <Project>{4004B6ED-1DB4-4C90-B4AE-3FBD3AC7C128}</Project>
-      <Name>PseudoBF.Builtins</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PseudoBF.CodeInfrastructure\PseudoBF.CodeInfrastructure.csproj">
-      <Project>{8FCA6628-7646-405B-B819-9903CA85CDC0}</Project>
-      <Name>PseudoBF.CodeInfrastructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PseudoBF.LowLevelActions\PseudoBF.LowLevelActions.csproj">
-      <Project>{492B94B0-69CB-4A1A-9259-58C225E39921}</Project>
-      <Name>PseudoBF.LowLevelActions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PseudoBF.MachineModel\PseudoBF.MachineModel.csproj">
-      <Project>{1C37359A-E9F5-403F-AF41-6041404C280E}</Project>
-      <Name>PseudoBF.MachineModel</Name>
+    <ProjectReference Include="..\..\PseudoBF\PseudoBF.csproj">
+      <Project>{893B6130-D819-4FDD-933D-07D42D8F7074}</Project>
+      <Name>PseudoBF</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

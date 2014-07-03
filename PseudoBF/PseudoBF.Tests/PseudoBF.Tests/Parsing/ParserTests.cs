@@ -28,7 +28,6 @@ namespace PseudoBF.Tests.Parsing
             N.Eq(0, model.Subroutines[0].Arguments.Count);
             N.Eq(0, ((CustomSubroutine)model.Subroutines[0]).Code.Count);
             N.Eq(0, ((CustomSubroutine)model.Subroutines[0]).Locals.Count);
-            N.Eq(SubroutineType.Function, model.Subroutines[0].Type);
             N.Eq("foo", model.Subroutines[0].Name);
         }
 
