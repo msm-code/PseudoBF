@@ -52,6 +52,8 @@
     <Compile Include="Builtins\EqualsBuiltin.cs" />
     <Compile Include="Builtins\IOperation.cs" />
     <Compile Include="Builtins\PutBuiltin.cs" />
+    <Compile Include="CodeDom\CodeBlock.cs" />
+    <Compile Include="CodeDom\CustomSubroutine.cs" />
     <Compile Include="CodeDom\ProgramModel.cs" />
     <Compile Include="CodeDom\Statement.cs" />
     <Compile Include="CodeDom\Subroutine.cs" />

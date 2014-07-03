@@ -21,12 +21,18 @@ function foo(znak) {
     else {
         print(""Nie przekazano znaku 'I'"");
     }
-
 }
 
 function main() : locals(a, b) {
     a = 70;
-    b = a + 1;
+    b = a + 3;
+
+    if (b == 73) {
+        print(""Przekazano znak 'I'"");
+    }
+    else {
+        print(""Nie przekazano znaku 'I'"");
+    }
 
     foo(b);
 }";
