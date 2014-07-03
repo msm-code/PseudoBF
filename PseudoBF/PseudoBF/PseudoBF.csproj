@@ -75,7 +75,4 @@
       <Name>PseudoBF.MachineModel</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="DependencyGraph.txt" />
-  </ItemGroup>
 </Project>

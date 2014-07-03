@@ -12,23 +12,19 @@ namespace PseudoBF
         static void Main(string[] args)
         {
             string code = @"
-function foo(znak)
-{
+function foo(znak) {
     print(""Function called!"");
 
-    if (znak == 73)
-    {
+    if (znak == 73) {
         print(""Przekazano znak 'I'"");
     }
-    else
-    {
+    else {
         print(""Nie przekazano znaku 'I'"");
     }
 
 }
 
-function main() : locals(a, b)
-{
+function main() : locals(a, b) {
     b = a + 1;
 
     foo(b);

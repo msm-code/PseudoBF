@@ -75,7 +75,7 @@ namespace PseudoBF.Compilation
                         HighLevelActionPolicies.Print(this, (Print)statement);
                         break;
                     default:
-                        throw new System.ArgumentException("Unknown type of operation");
+                        throw new System.InvalidOperationException("Unknown type of operation");
                 }
             }
         }
