@@ -1,8 +1,0 @@
-﻿using PseudoBF.CodeDom;
-
-namespace PseudoBF.CodeInfrastructure
-{
-    internal class LocalVariable : Variable
-    {
-    }
-}

@@ -1,4 +1,0 @@
-D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\bin\Debug\PseudoBF.MachineModel.dll
-D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\bin\Debug\PseudoBF.MachineModel.pdb
-D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\obj\Debug\PseudoBF.MachineModel.dll
-D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\obj\Debug\PseudoBF.MachineModel.pdb

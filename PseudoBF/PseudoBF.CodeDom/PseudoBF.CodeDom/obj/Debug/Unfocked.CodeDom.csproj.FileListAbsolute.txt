@@ -1,5 +1,0 @@
-D:\Projects\C#\PseudoBF\PseudoBF.CodeDom\Unfocked.CodeDom\bin\Debug\Unfocked.CodeDom.dll
-D:\Projects\C#\PseudoBF\PseudoBF.CodeDom\Unfocked.CodeDom\bin\Debug\Unfocked.CodeDom.pdb
-D:\Projects\C#\PseudoBF\PseudoBF.CodeDom\Unfocked.CodeDom\obj\Debug\Unfocked.CodeDom.dll
-D:\Projects\C#\PseudoBF\PseudoBF.CodeDom\Unfocked.CodeDom\obj\Debug\Unfocked.CodeDom.pdb
-D:\Projects\C#\PseudoBF\PseudoBF.CodeDom\Unfocked.CodeDom\obj\Debug\ResolveAssemblyReference.cache
