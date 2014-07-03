@@ -1,0 +1,8 @@
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\bin\Release\PseudoBF.MachineModel.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\bin\Release\PseudoBF.MachineModel.pdb
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\obj\Release\PseudoBF.MachineModel.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\obj\Release\PseudoBF.MachineModel.pdb
+C:\Users\msm\User\Code\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\bin\Release\PseudoBF.MachineModel.dll
+C:\Users\msm\User\Code\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\bin\Release\PseudoBF.MachineModel.pdb
+C:\Users\msm\User\Code\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\obj\Release\PseudoBF.MachineModel.dll
+C:\Users\msm\User\Code\C#\PseudoBF\PseudoBF\PseudoBF.MachineModel\obj\Release\PseudoBF.MachineModel.pdb

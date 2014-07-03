@@ -1,0 +1,17 @@
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\PseudoBF.Parsing.pdb
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\Antlr3.Runtime.dll
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\Antlr3.Runtime.pdb
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\obj\Debug\PseudoBF.Parsing.pdb
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\PseudoBF.CodeDom.dll
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\PseudoBF.CodeDom.pdb
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\PseudoBF.Parsing.dll
+D:\Projects\C#\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\obj\Debug\PseudoBF.Parsing.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\PseudoBF.Parsing.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\PseudoBF.Parsing.pdb
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\PseudoBF.CodeDom.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\PseudoBF.CodeDom.pdb
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\bin\Debug\Antlr3.Runtime.pdb
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\obj\Debug\PseudoBF.Parsing.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.Parsing\PseudoBF.Parsing\obj\Debug\PseudoBF.Parsing.pdb

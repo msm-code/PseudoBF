@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.sln</TopNode>
+  <SelectedNode>[0-1060]PseudoBF.Tests.LowLevelOperations.CopyOperationTests.TestCopy</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.sln" Expanded="true" />
+    <Node UniqueName="[0-1066]D:\Projects\C#\PseudoBF\PseudoBF.Tests\PseudoBF.Tests\bin\Debug\PseudoBF.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1067]PseudoBF" Expanded="true" />
+    <Node UniqueName="[0-1068]PseudoBF.Tests" Expanded="true" />
+    <Node UniqueName="[0-1071]PseudoBF.Tests.BrainfuckInterpreter" Expanded="true" />
+    <Node UniqueName="[0-1069]PseudoBF.Tests.BuiltinFunctions" Expanded="true" />
+    <Node UniqueName="[0-1004]PseudoBF.Tests.BuiltinFunctions.AddTests" Expanded="true" />
+    <Node UniqueName="[0-1005]PseudoBF.Tests.BuiltinFunctions.AddTests.AddNumberToNumberTests" Expanded="true" />
+    <Node UniqueName="[0-1010]PseudoBF.Tests.BuiltinFunctions.AddTests.AddNumberToVariableTests" Expanded="true" />
+    <Node UniqueName="[0-1015]PseudoBF.Tests.BuiltinFunctions.AddTests.AddVariableToVariableTests" Expanded="true" />
+    <Node UniqueName="[0-1031]PseudoBF.Tests.BuiltinFunctions.EqualsTests" Expanded="true" />
+    <Node UniqueName="[0-1073]PseudoBF.Tests.Compilation" Expanded="true" />
+    <Node UniqueName="[0-1072]PseudoBF.Tests.LowLevelOperations" Expanded="true" />
+    <Node UniqueName="[0-1059]PseudoBF.Tests.LowLevelOperations.CopyOperationTests" Expanded="true" />
+    <Node UniqueName="[0-1070]PseudoBF.Tests.Parsing" Expanded="true" />
+    <Node UniqueName="[0-1020]PseudoBF.Tests.Parsing.ParserTests" Expanded="true" />
+  </Nodes>
+</VisualState>

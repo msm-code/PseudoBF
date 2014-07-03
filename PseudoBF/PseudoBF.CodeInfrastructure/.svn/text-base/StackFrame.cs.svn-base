@@ -1,0 +1,78 @@
+﻿using System.Collections.Generic;
+using PseudoBF.CodeDom;
+using System;
+using System.Linq;
+using PseudoBF.MachineModel;
+
+namespace PseudoBF.CodeInfrastructure
+{
+    public class StackFrame
+    {
+        int startLocation;
+        List<Variable> variables;
+        Variable returnValue;
+        int oryginalSize;
+
+        public StackFrame(StackContext stack, Subroutine subroutine)
+        {
+            startLocation = stack.UsedCells;
+            variables = subroutine.Arguments.Cast<Variable>().ToList();
+            this.Subroutine = subroutine;
+            this.oryginalSize = variables.Count;
+            returnValue = new LocalVariable();
+            this.variables.Add(ReturnValue);
+        }
+
+        public Subroutine Subroutine
+        { get; private set; }
+
+        public Location GetVariableLocation(Variable var)
+        {
+            return new Location(variables.IndexOf(var));
+        }
+
+        public int Size
+        { get { return oryginalSize; } }
+
+        public Variable ReturnValue
+        { get { return returnValue; } }
+
+        public Location ReturnValueLocation
+        { get { return new Location(variables.IndexOf(returnValue)); } }
+
+        public void AllocateExistingVariables(List<Variable> newVariables)
+        {
+            this.variables.AddRange(newVariables);
+        }
+
+        public List<Variable> AllocateNewVariables(int count)
+        {
+            List<Variable> locals = new List<Variable>();
+            for (int i = 0; i < count; i++)
+            {
+                LocalVariable var = new LocalVariable();
+                locals.Add(var);
+            }
+
+            this.variables.AddRange(locals);
+
+            return locals;
+        }
+
+        public Variable AllocateNewVariable()
+        { return AllocateNewVariables(1)[0]; }
+        
+        public List<Location> AllocateNewVariablesAndGetLocations(int count)
+        {
+            return AllocateNewVariables(count).Select((x) => GetVariableLocation(x as LocalVariable)).ToList();
+        }
+
+        public Location AllocateNewVariableAndGetLocation()
+        { return AllocateNewVariablesAndGetLocations(1)[0]; }
+
+        public void FreeVariables(int count)
+        {
+            this.variables.RemoveRange(variables.Count - count, count);
+        }
+    }
+}

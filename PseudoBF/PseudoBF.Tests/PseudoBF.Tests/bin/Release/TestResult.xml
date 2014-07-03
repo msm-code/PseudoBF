@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\Projects\C#\PseudoBF\PseudoBF.Tests\PseudoBF.Tests\bin\Release\PseudoBF.Tests.dll" total="4" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-08-04" time="02:22:11">
+  <environment nunit-version="2.5.8.10295" clr-version="2.0.50727.4961" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="D:\Projects\C#\PseudoBF\PseudoBF" machine-name="JAREKPC" user="Jarek" user-domain="JAREKPC" />
+  <culture-info current-culture="pl-PL" current-uiculture="pl-PL" />
+  <test-suite type="Assembly" name="D:\Projects\C#\PseudoBF\PseudoBF.Tests\PseudoBF.Tests\bin\Release\PseudoBF.Tests.dll" executed="True" result="Failure" success="False" time="0.015" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="PseudoBF" executed="True" result="Failure" success="False" time="0.015" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="0.015" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Parsing" executed="True" result="Failure" success="False" time="0.015" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="ParserTests" executed="True" result="Failure" success="False" time="0.001" asserts="0">
+                    <results>
+                      <test-case name="PseudoBF.Tests.Parsing.ParserTests.TestArguments" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="PseudoBF.Tests.Parsing.ParserTests.TestLocals" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+                      <test-case name="PseudoBF.Tests.Parsing.ParserTests.TestReturnAssignmentAndCallExpressions" executed="True" result="Failure" success="False" time="0.000" asserts="5">
+                        <failure>
+                          <message><![CDATA[  Expected string length 3 but was 10. Strings differ at index 0.
+  Expected: "src"
+  But was:  "VALUE_IMAG"
+  -----------^
+]]></message>
+                          <stack-trace><![CDATA[w PseudoBF.Tests.Parsing.ParserTests.TestReturnAssignmentAndCallExpressions() w D:\Projects\C#\PseudoBF\PseudoBF.Tests\PseudoBF.Tests\Parsing\ParserTests.cs:wiersz 66
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="PseudoBF.Tests.Parsing.ParserTests.TestSimpleFunc" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

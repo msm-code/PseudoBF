@@ -1,0 +1,13 @@
+﻿kod źródłowy
+    ^
+   DOM   < < < < < < < < < < < \
+    ^           \      \       ^
+wysokopoziomowe akcje  ^       ^
+   v             v  v  ^       ^
+   v             v  Builtiny   ^
+   v             v     v       ^
+   v            Infrastruktura / > > > > 
+   v                                     \
+niskopoziomowe akcje (PrimitiveActions)   v
+   v                                     /
+model maszyny (IMachine) < < < < < < < <

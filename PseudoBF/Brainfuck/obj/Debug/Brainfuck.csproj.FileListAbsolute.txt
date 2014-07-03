@@ -1,0 +1,5 @@
+D:\Projects\C#\PseudoBF\PseudoBF\Brainfuck\bin\Debug\Brainfuck.dll
+D:\Projects\C#\PseudoBF\PseudoBF\Brainfuck\bin\Debug\Brainfuck.pdb
+D:\Projects\C#\PseudoBF\PseudoBF\Brainfuck\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\C#\PseudoBF\PseudoBF\Brainfuck\obj\Debug\Brainfuck.dll
+D:\Projects\C#\PseudoBF\PseudoBF\Brainfuck\obj\Debug\Brainfuck.pdb

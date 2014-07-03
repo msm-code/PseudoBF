@@ -1,0 +1,9 @@
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\bin\Debug\PseudoBF.CodeInfrastructure.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\bin\Debug\PseudoBF.CodeInfrastructure.pdb
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\bin\Debug\PseudoBF.CodeDom.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\bin\Debug\PseudoBF.MachineModel.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\bin\Debug\PseudoBF.CodeDom.pdb
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\bin\Debug\PseudoBF.MachineModel.pdb
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\obj\Debug\PseudoBF.CodeInfrastructure.dll
+D:\Projects\C#\PseudoBF\PseudoBF\PseudoBF.CodeInfrastructure\obj\Debug\PseudoBF.CodeInfrastructure.pdb
