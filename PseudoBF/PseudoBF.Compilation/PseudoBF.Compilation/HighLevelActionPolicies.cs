@@ -4,7 +4,6 @@ using PseudoBF.MachineModel;
 using PseudoBF.Builtins;
 using PseudoBF.Compilation.Operations;
 using PseudoBF.CodeInfrastructure;
-using PseudoBF.Data;
 
 namespace PseudoBF.Compilation
 {
@@ -12,8 +11,7 @@ namespace PseudoBF.Compilation
     {
         internal static void Assignment(CompilerContext compiler, Assignment assignment)
         {
-            //CopyValue(compiler, assignment.Destination, assignment.Source);
-            throw new System.NotImplementedException();
+            CopyValue(compiler, assignment.Destination, assignment.Source);
         }
 
         internal static void If(CompilerContext compiler, If p)
@@ -28,13 +26,12 @@ namespace PseudoBF.Compilation
 
         internal static void Return(CompilerContext compiler, Return _return)
         {
-            //CopyValue(compiler, compiler.Stack.CurrentFrame.ReturnValue, _return.Value);
-            throw new System.NotImplementedException();
+            CopyValue(compiler, compiler.Stack.CurrentFrame.ReturnValue, _return.Value);
         }
 
         internal static void Print(CompilerContext compiler, Print print)
         {
-            /*string text = print.Text;
+            string text = print.Text;
             IMachine machine = compiler.Executor;
 
             Location temp = compiler.Stack.CurrentFrame.AllocateNewVariableAndGetLocation();
@@ -52,8 +49,7 @@ namespace PseudoBF.Compilation
                 { machine.Dec(-diff); machine.Print(); }
 
                 last = curr;
-            }*/
-            throw new System.NotImplementedException();
+            }
         }
 
         internal static void Call(CompilerContext compiler, Call call)
@@ -61,7 +57,6 @@ namespace PseudoBF.Compilation
             if (call.Subroutine.ImplType == ImplementationType.Custom)
             {
                 compiler.Compile(call.Subroutine);
-                //throw new System.NotImplementedException();
             }
             else if (call.Subroutine.ImplType == ImplementationType.External)
             {
@@ -72,9 +67,8 @@ namespace PseudoBF.Compilation
             { throw new System.ArgumentException("Unknown subroutine type"); }
         }
 
-        private static void CopyValue(CompilerContext compiler, CharData destination, IValueProvider source)
+        private static void CopyValue(CompilerContext compiler, VariableName destination, IValueProvider source)
         {
-            /*
             StackFrame frame = compiler.Stack.CurrentFrame;
             IMachine machine = compiler.Executor;
             Location loc = frame.GetVariableLocation(destination);
@@ -84,7 +78,7 @@ namespace PseudoBF.Compilation
             }
             else if (source.Type == ValueType.Variable)
             {
-                Location var2loc = frame.GetVariableLocation(source as Variable);
+                Location var2loc = frame.GetVariableLocation(source as VariableName);
                 Location helper = frame.AllocateNewVariableAndGetLocation();
                 machine.Copy(loc, var2loc, helper);
                 frame.FreeVariables(1);
@@ -95,8 +89,7 @@ namespace PseudoBF.Compilation
                 Call(compiler, (source as Call));
                 machine.Copy(loc, frame.ReturnValueLocation, helper);
                 frame.FreeVariables(1);
-            }*/
-            throw new System.NotImplementedException();
+            }
         }
     }
 }

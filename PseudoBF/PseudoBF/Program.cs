@@ -18,11 +18,11 @@ function foo(znak)
 
     if (znak == 73)
     {
-        print(""Przekazano znak 'I' :) "");
+        print(""Przekazano znak 'I'"");
     }
     else
     {
-        print(""Nie przekazano znaku 'I' :( "");
+        print(""Nie przekazano znaku 'I'"");
     }
 
 }

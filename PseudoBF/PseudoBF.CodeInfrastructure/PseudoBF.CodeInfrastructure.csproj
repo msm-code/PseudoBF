@@ -46,7 +46,7 @@
   </Target>
   -->
   <ItemGroup>
-    <Compile Include="IInMemoryData.cs" />
+    <Compile Include="CharData.cs" />
     <Compile Include="StackContext.cs" />
     <Compile Include="StackFrame.cs" />
   </ItemGroup>

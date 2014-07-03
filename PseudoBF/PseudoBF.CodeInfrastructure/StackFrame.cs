@@ -9,27 +9,24 @@ namespace PseudoBF.CodeInfrastructure
     public class StackFrame
     {
         int startLocation;
-        List<IInMemoryData> variables;
-        IInMemoryData returnValue;
+        List<VariableName> variables;
+        VariableName returnValue;
         int oryginalSize;
 
         public StackFrame(StackContext stack, Subroutine subroutine)
         {
             startLocation = stack.UsedCells;
-            variables = new List<IInMemoryData>();
-            // subroutine.Arguments.Cast<Variable>().ToList();
-            throw new System.NotImplementedException();
+            variables = subroutine.Arguments.ToList(); // use .ToList to shallow copy list
             this.Subroutine = subroutine;
             this.oryginalSize = variables.Count;
-            //returnValue = new Variable();
-            throw new System.NotImplementedException();
+            returnValue = new VariableName(null);
             this.variables.Add(ReturnValue);
         }
 
         public Subroutine Subroutine
         { get; private set; }
 
-        public Location GetVariableLocation(IInMemoryData var)
+        public Location GetVariableLocation(VariableName var)
         {
             return new Location(variables.IndexOf(var));
         }
@@ -37,29 +34,29 @@ namespace PseudoBF.CodeInfrastructure
         public int Size
         { get { return oryginalSize; } }
 
-        public IInMemoryData ReturnValue
+        public VariableName ReturnValue
         { get { return returnValue; } }
 
         public Location ReturnValueLocation
         { get { return new Location(variables.IndexOf(returnValue)); } }
 
-        public void AddData(IInMemoryData data)
+        public void AddData(VariableName data)
         { this.variables.Add(data); }
 
-        public void AddData(List<IInMemoryData> data)
+        public void AddData(List<VariableName> data)
         { this.variables.AddRange(data); }
 
-        /*public void AllocateExistingVariables(List<Variable> newVariables)
+        public void AllocateExistingVariables(List<VariableName> newVariables)
         {
             this.variables.AddRange(newVariables);
         }
 
-        public List<Variable> AllocateNewVariables(int count)
+        public List<VariableName> AllocateNewVariables(int count)
         {
-            List<Variable> locals = new List<Variable>();
+            List<VariableName> locals = new List<VariableName>();
             for (int i = 0; i < count; i++)
             {
-                Variable var = new Variable();
+                VariableName var = new VariableName(null);
                 locals.Add(var);
             }
 
@@ -68,16 +65,16 @@ namespace PseudoBF.CodeInfrastructure
             return locals;
         }
 
-        public Variable AllocateNewVariable()
+        public VariableName AllocateNewVariable()
         { return AllocateNewVariables(1)[0]; }
         
         public List<Location> AllocateNewVariablesAndGetLocations(int count)
         {
-            return AllocateNewVariables(count).Select((x) => GetVariableLocation(x as Variable)).ToList();
+            return AllocateNewVariables(count).Select((x) => GetVariableLocation(x as VariableName)).ToList();
         }
 
         public Location AllocateNewVariableAndGetLocation()
-        { return AllocateNewVariablesAndGetLocations(1)[0]; }*/
+        { return AllocateNewVariablesAndGetLocations(1)[0]; }
 
         public void FreeVariables(int count)
         {

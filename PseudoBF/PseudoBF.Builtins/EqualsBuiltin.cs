@@ -2,43 +2,40 @@
 using PseudoBF.MachineModel;
 using PseudoBF.Compilation.Operations;
 using PseudoBF.CodeInfrastructure;
-using PseudoBF.Data;
 
 namespace PseudoBF.Builtins
 {
     public class EqualsBuiltin : IOperation
     {
-        CharData data1;
-        CharData data2;
+        IValueProvider value1;
+        IValueProvider value2;
         StackFrame stack;
 
-        public EqualsBuiltin(CharData data1, CharData data2, StackFrame stack)
+        public EqualsBuiltin(IValueProvider data1, IValueProvider data2, StackFrame stack)
         {
-            this.data1 = data1;
-            this.data2 = data2;
+            this.value1 = data1;
+            this.value2 = data2;
             this.stack = stack;
         }
 
         public void Execute(IMachine machine)
-        {/*
+        {
             if (value1.Type == ValueType.Number && value2.Type == ValueType.Number)
             {
                 TwoNumbersEquals((Number)value1, (Number)value2, machine);
             }
             else if (value1.Type == ValueType.Number && value2.Type == ValueType.Variable)
             {
-                NumberEqualsVariable((Number)value1, (Variable)value2, machine);
+                NumberEqualsVariable((Number)value1, (VariableName)value2, machine);
             }
             else if (value1.Type == ValueType.Variable && value2.Type == ValueType.Number)
             {
-                NumberEqualsVariable((Number)value2, (Variable)value1, machine);
+                NumberEqualsVariable((Number)value2, (VariableName)value1, machine);
             }
             else
             {
-                TwoVariablesEquals((Variable)value1, (Variable)value2, machine);
-            }*/
-
-            throw new System.NotImplementedException();
+                TwoVariablesEquals((VariableName)value1, (VariableName)value2, machine);
+            }
         }
 
         private void TwoNumbersEquals(Number number1, Number number2, IMachine machine)
@@ -53,9 +50,9 @@ namespace PseudoBF.Builtins
             }
         }
 
-        private void NumberEqualsVariable(Number number, CharData variable, IMachine machine)
+        private void NumberEqualsVariable(Number number, VariableName variable, IMachine machine)
         {
-            /*Location temp0 = stack.AllocateNewVariableAndGetLocation();
+            Location temp0 = stack.AllocateNewVariableAndGetLocation();
             Location varLoc = stack.GetVariableLocation(variable);
 
             machine.Copy(stack.ReturnValueLocation, varLoc, temp0);
@@ -66,14 +63,12 @@ namespace PseudoBF.Builtins
                 () => { machine.Set(stack.ReturnValueLocation, 0); },
                 () => { machine.Set(stack.ReturnValueLocation, 1); });
 
-            stack.FreeVariables(2);*/
-
-            throw new System.NotImplementedException();
+            stack.FreeVariables(2);
         }
 
-        private void TwoVariablesEquals(CharData variable1, CharData variable2, IMachine machine)
+        private void TwoVariablesEquals(VariableName variable1, VariableName variable2, IMachine machine)
         {
-            /*Location loc1 = stack.GetVariableLocation(variable1);
+            Location loc1 = stack.GetVariableLocation(variable1);
             Location loc2 = stack.GetVariableLocation(variable2);
             Location temp0 = stack.AllocateNewVariableAndGetLocation();
             Location temp1 = stack.AllocateNewVariableAndGetLocation();
@@ -94,8 +89,7 @@ namespace PseudoBF.Builtins
                 machine.Set(temp1, 0);
             });
 
-            stack.FreeVariables(2);*/
-            throw new System.NotImplementedException();
+            stack.FreeVariables(2);
         }
     }
 }

@@ -73,10 +73,6 @@
       <Project>{8FCA6628-7646-405B-B819-9903CA85CDC0}</Project>
       <Name>PseudoBF.CodeInfrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\PseudoBF.Data\PseudoBF.Data.csproj">
-      <Project>{CFA14A7D-6D68-4C09-8EF5-A84C2F604572}</Project>
-      <Name>PseudoBF.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\PseudoBF.LowLevelActions\PseudoBF.LowLevelActions.csproj">
       <Project>{492B94B0-69CB-4A1A-9259-58C225E39921}</Project>
       <Name>PseudoBF.LowLevelActions</Name>

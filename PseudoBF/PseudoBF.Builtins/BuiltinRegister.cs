@@ -12,15 +12,14 @@ namespace PseudoBF.Builtins
 
         static BuiltinRegister()
         {
-            /*builtins = new List<BuiltinSubroutine>();
+            builtins = new List<BuiltinSubroutine>();
 
             builtins.Add(new BuiltinSubroutine(SubroutineType.Function, (p, s) => new AddBuiltin(p[0], p[1], s),
                 "+", "var1", "var2"));
             builtins.Add(new BuiltinSubroutine(SubroutineType.Procedure, (p, s) => new PutBuiltin(p[0], s),
                 "put", "charecterToPrint"));
             builtins.Add(new BuiltinSubroutine(SubroutineType.Function, (p, s) => new EqualsBuiltin(p[0], p[1], s),
-                "==", "var1", "var2"));*/
-            throw new System.NotImplementedException();
+                "==", "var1", "var2"));
         }
 
         public static List<Subroutine> Subroutines

@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PseudoBF.Builtins", "Pseudo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PseudoBF.CodeInfrastructure", "PseudoBF.CodeInfrastructure\PseudoBF.CodeInfrastructure.csproj", "{8FCA6628-7646-405B-B819-9903CA85CDC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PseudoBF.Data", "PseudoBF.Data\PseudoBF.Data.csproj", "{CFA14A7D-6D68-4C09-8EF5-A84C2F604572}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,10 +67,6 @@ Global
 		{8FCA6628-7646-405B-B819-9903CA85CDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FCA6628-7646-405B-B819-9903CA85CDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FCA6628-7646-405B-B819-9903CA85CDC0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CFA14A7D-6D68-4C09-8EF5-A84C2F604572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFA14A7D-6D68-4C09-8EF5-A84C2F604572}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFA14A7D-6D68-4C09-8EF5-A84C2F604572}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CFA14A7D-6D68-4C09-8EF5-A84C2F604572}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

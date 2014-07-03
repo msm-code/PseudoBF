@@ -46,9 +46,7 @@
   </Target>
   -->
   <ItemGroup>
-    <Compile Include="CharData.cs" />
     <Compile Include="DataConverter.cs" />
-    <Compile Include="StackWalker.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PseudoBF.CodeInfrastructure\PseudoBF.CodeInfrastructure.csproj">

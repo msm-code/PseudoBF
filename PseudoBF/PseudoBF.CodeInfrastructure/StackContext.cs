@@ -24,8 +24,7 @@ namespace PseudoBF.CodeInfrastructure
             if (subroutine is IWithLocalVariables)
             {
                 IWithLocalVariables localsSubroutine = subroutine as IWithLocalVariables;
-                //frame.AllocateExistingVariables(localsSubroutine.Locals.Cast<Variable>().ToList());
-                throw new NotImplementedException();
+                frame.AllocateExistingVariables(localsSubroutine.Locals.Cast<VariableName>().ToList());
             }
 
             this.UsedCells += frame.Size;
