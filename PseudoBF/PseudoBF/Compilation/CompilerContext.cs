@@ -2,6 +2,7 @@
 using PseudoBF.CodeDom;
 using System.Collections.Generic;
 using PseudoBF.CodeInfrastructure;
+using PseudoBF.Compilation.Operations;
 
 namespace PseudoBF.Compilation
 {
@@ -32,7 +33,11 @@ namespace PseudoBF.Compilation
             stackState.Enter(subroutine);
             stackState.CurrentFrame.AllocateExistingVariables(subroutine.Locals);
 
+            var oldLoc = executor.Location;
+            executor.OverrideLocation(Location.Zero);
             Compile(subroutine.Code);
+            executor.MoveTo(new Location(subroutine.Locals.Count));
+            executor.OverrideLocation(oldLoc);
 
             stackState.Exit(subroutine);
         }

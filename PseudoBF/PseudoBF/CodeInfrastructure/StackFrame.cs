@@ -10,15 +10,14 @@ namespace PseudoBF.CodeInfrastructure
     {
         List<VariableName> variables;
         VariableName returnValue;
-        int oryginalSize;
 
         public StackFrame(StackContext stack, Subroutine subroutine)
         {
-            variables = subroutine.Arguments.ToList(); // use .ToList to shallow copy list
+            this.variables = new List<VariableName>();
+            this.returnValue = new VariableName();
+            this.variables.Add(returnValue);
+            this.variables.AddRange(subroutine.Arguments.ToList()); // use .ToList to shallow copy list
             this.Subroutine = subroutine;
-            this.oryginalSize = variables.Count;
-            returnValue = new VariableName(null);
-            this.variables.Add(ReturnValue);
         }
 
         public Subroutine Subroutine
@@ -26,11 +25,14 @@ namespace PseudoBF.CodeInfrastructure
 
         public Location GetVariableLocation(VariableName var)
         {
-            return new Location(variables.IndexOf(var));
-        }
+            if (!variables.Contains(var))
+            {
+                throw new ArgumentException("Variable is not allocated");
+            }
 
-        public int Size
-        { get { return oryginalSize; } }
+            var index = variables.LastIndexOf(var);
+            return new Location(variables.LastIndexOf(var));
+        }
 
         public VariableName ReturnValue
         { get { return returnValue; } }
@@ -52,7 +54,7 @@ namespace PseudoBF.CodeInfrastructure
             List<VariableName> locals = new List<VariableName>();
             for (int i = 0; i < count; i++)
             {
-                VariableName var = new VariableName(null);
+                VariableName var = new VariableName();
                 locals.Add(var);
             }
 

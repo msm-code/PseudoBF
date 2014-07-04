@@ -23,5 +23,10 @@
         {
             return NumericValue.GetHashCode();
         }
+
+        public override string ToString()
+        {
+            return "[" + NumericValue + "]";
+        }
     }
 }

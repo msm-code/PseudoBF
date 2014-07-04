@@ -3,6 +3,7 @@
     public interface IMachine
     {
         Location Location { get; }
+        void OverrideLocation(Location newLoc);
         void Comment(string format, params object[] args);
         void Forward(int howMuch);
         void Backward(int howMuch);

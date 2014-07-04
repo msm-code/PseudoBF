@@ -2,8 +2,15 @@
 {
     public class VariableName : IValueProvider
     {
-        public VariableName(string variableId)
+        static int unnamedVariables;
+
+        public VariableName(string variableId = null)
         {
+            if (variableId == null)
+            {
+                variableId = "$unnamed" + unnamedVariables;
+                unnamedVariables++;
+            }
             this.VariableId = variableId;
         }
 
@@ -22,6 +29,11 @@
         public override int GetHashCode()
         {
             return VariableId.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return "[" + VariableId + "]";
         }
     }
 }

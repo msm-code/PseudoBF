@@ -65,5 +65,10 @@ namespace PseudoBF.Tests.LowLevelOperations
         #endregion
 
         public void Comment(string format, params object[] args) { }
+
+        public void OverrideLocation(Location newLoc)
+        {
+            underlying.Location = newLoc;
+        }
     }
 }

@@ -62,12 +62,12 @@ namespace PseudoBF.Compilation
         internal static void Call(CompilerContext compiler, Call call)
         {
             var paramString = string.Join(", ", call.Parameters.Select(x => x.ToString()));
-            compiler.Executor.Comment("Call {0} ({1})", call.Subroutine, paramString);
+            compiler.Executor.Comment("Call {0} ({1})", call.Subroutine.Name, paramString);
 
             call.Subroutine.Compile(compiler, call.Parameters);
         }
 
-        private static void CopyValue(CompilerContext compiler, VariableName destination, IValueProvider source)
+        internal static void CopyValue(CompilerContext compiler, VariableName destination, IValueProvider source)
         {
             compiler.Executor.Comment("{0} <- {1}", destination, source);
 

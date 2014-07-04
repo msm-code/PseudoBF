@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using PseudoBF.Compilation;
 using System.Linq;
+using PseudoBF.MachineModel;
+using PseudoBF.Compilation.Operations;
 
 namespace PseudoBF.CodeDom
 {
@@ -27,7 +29,20 @@ namespace PseudoBF.CodeDom
 
         public override void Compile(CompilerContext compiler, List<IValueProvider> parameters)
         {
+            var executor = compiler.Executor;
+            var frame = compiler.Stack.CurrentFrame;
+
+            var retval = frame.AllocateNewVariableAndGetLocation(); // return value;
+            var args = frame.AllocateNewVariables(parameters.Count);
+            for (int i = 0; i < parameters.Count; i++)
+            {
+                HighLevelActionPolicies.CopyValue(compiler, args[i], parameters[i]);
+            }
+
+            compiler.Executor.MoveTo(retval);
             compiler.Compile(this);
+
+            frame.FreeVariables(parameters.Count + 1);
         }
     }
 }

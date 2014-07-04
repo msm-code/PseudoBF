@@ -4,6 +4,8 @@
     {
         private int location;
 
+        public static readonly Location Zero = new Location(0);
+
         public Location(int location)
         {
             this.location = location;

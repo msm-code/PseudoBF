@@ -17,6 +17,7 @@ namespace PseudoBF.Compilation
         public Location Location
         {
             get { return new Location(location); }
+            set { location = value.InternalPosition; }
         }
 
         public void Backward(int times)
@@ -77,7 +78,17 @@ namespace PseudoBF.Compilation
         public void Comment(string format, params object[] args)
         {
             bool clear = builder.Length == 0 || builder[builder.Length - 1] == '\n';
-            builder.Append((clear ? "" : "\n") + string.Format(format, args) + "\n");
+            string msg = (clear ? "" : "\n") + string.Format(format, args) + "\n";
+            string finalMsg = msg.Replace("[", "{").Replace("]", "}")
+                                 .Replace("+", "#p").Replace("-", "#m")
+                                 .Replace(".", "#").Replace(",", ";")
+                                 .Replace("<", "(lt)").Replace(">", "(gt)");
+            builder.Append(finalMsg);
+        }
+
+        public void OverrideLocation(Location newLoc)
+        {
+            this.location = newLoc.InternalPosition;
         }
     }
 }

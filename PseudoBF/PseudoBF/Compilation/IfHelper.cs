@@ -18,7 +18,7 @@ namespace PseudoBF.Compilation
             }
             else if (p.Test.Type == ValueType.Variable)
             {
-                ProcessVariableIf(compiler, (p.Test as VariableName), p.CodeIf, p.CodeElse);   
+                ProcessVariableIf(compiler, (p.Test as VariableName), p.CodeIf, p.CodeElse);
             }
             else if (p.Test.Type == ValueType.FunctionCall)
             {
@@ -45,8 +45,16 @@ namespace PseudoBF.Compilation
             else
             {
                 compiler.Executor.IfElse(varLoc, temp0, temp1,
-                    () => { compiler.Compile(codeIf); },
-                    () => { compiler.Compile(codeElse); });
+                    () =>
+                    {
+                        compiler.Executor.Comment("If true");
+                        compiler.Compile(codeIf);
+                    },
+                    () =>
+                    {
+                        compiler.Executor.Comment("If false");
+                        compiler.Compile(codeElse);
+                    });
             }
         }
     }

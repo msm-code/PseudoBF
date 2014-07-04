@@ -12,29 +12,50 @@ namespace PseudoBF
         static void Main(string[] args)
         {
             string code = @"
-function foo(znak) {
-    print(""Function called!"");
+function foo(znak, wut, lol, swag, yolo) {
+    print(""Function Call"");
 
     if (znak == 73) {
-        print(""Przekazano znak 'I'"");
+        print(""OK, YOLO"");
     }
     else {
-        print(""Nie przekazano znaku 'I'"");
+        print(""nie ma takiego yolo"");
     }
+
+    if (znak == 72) {
+        print(""niedobsz swag"");
+    }
+    else {
+        print(""DOBRZE SWAG"");
+    }
+
+    znak = znak + wut;
+    znak = lol + swag;
+    znak = znak + yolo;
 }
 
-function main() : locals(a, b) {
+function main() : locals(a, b, c) {
     a = 70;
     b = a + 3;
+    c = a + 10;
+
+    foo(b, 1, 13, 66, 50);
+    foo(b, 1, 13, 66, 50);
 
     if (b == 73) {
-        print(""Przekazano znak 'I'"");
+        print(""OK, YOLO"");
     }
     else {
-        print(""Nie przekazano znaku 'I'"");
+        print(""nie ma takiego yolo"");
     }
 
-    foo(b);
+
+    if (b == 72) {
+        print(""niedobsz swag"");
+    }
+    else {
+        print(""DOBRZE SWAG"");
+    }
 }";
 
             IParser parser = ParserFactory.Create();
