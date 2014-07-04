@@ -17,10 +17,10 @@ namespace PseudoBF.Parsing
     {
         public ValueList()
         {
-            Values = new List<IValueProvider>();
+            Values = new List<IValue>();
         }
 
-        public List<IValueProvider> Values { get; set; }
+        public List<IValue> Values { get; set; }
     }
 
     internal class LocalsDef

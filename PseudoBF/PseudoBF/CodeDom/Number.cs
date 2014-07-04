@@ -1,6 +1,6 @@
 ﻿namespace PseudoBF.CodeDom
 {
-    public class Number : IValueProvider
+    public class Number : IValue
     {
         public Number(byte numericValue)
         {

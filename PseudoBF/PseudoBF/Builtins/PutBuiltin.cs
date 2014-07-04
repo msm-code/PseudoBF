@@ -7,10 +7,10 @@ namespace PseudoBF.Builtins
 {
     class PutBuiltin : IOperation
     {
-        IValueProvider value;
+        IValue value;
         StackFrame stack;
 
-        public PutBuiltin(IValueProvider value, StackFrame stack)
+        public PutBuiltin(IValue value, StackFrame stack)
         {
             this.value = value;
             this.stack = stack;
@@ -29,8 +29,7 @@ namespace PseudoBF.Builtins
             {
                 putLoc = stack.GetVariableLocation(value as VariableName);
             }
-            else
-            { throw new System.ArgumentException("Unsupported argument"); }
+            else { throw new System.ArgumentException("Unsupported argument"); }
 
             machine.MoveTo(putLoc);
             machine.Print();

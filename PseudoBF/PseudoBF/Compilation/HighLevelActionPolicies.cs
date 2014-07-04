@@ -67,7 +67,7 @@ namespace PseudoBF.Compilation
             call.Subroutine.Compile(compiler, call.Parameters);
         }
 
-        internal static void CopyValue(CompilerContext compiler, VariableName destination, IValueProvider source)
+        internal static void CopyValue(CompilerContext compiler, VariableName destination, IValue source)
         {
             compiler.Executor.Comment("{0} <- {1}", destination, source);
 

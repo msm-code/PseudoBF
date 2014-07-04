@@ -19,6 +19,6 @@ namespace PseudoBF.CodeDom
 
         internal virtual void LinkTo(ProgramModel programModel) { }
 
-        public abstract void Compile(CompilerContext compiler, List<IValueProvider> parameters);
+        public abstract void Compile(CompilerContext compiler, List<IValue> parameters);
     }
 }

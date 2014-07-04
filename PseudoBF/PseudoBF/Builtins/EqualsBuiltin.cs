@@ -7,11 +7,11 @@ namespace PseudoBF.Builtins
 {
     public class EqualsBuiltin : IOperation
     {
-        IValueProvider value1;
-        IValueProvider value2;
+        IValue value1;
+        IValue value2;
         StackFrame stack;
 
-        public EqualsBuiltin(IValueProvider data1, IValueProvider data2, StackFrame stack)
+        public EqualsBuiltin(IValue data1, IValue data2, StackFrame stack)
         {
             this.value1 = data1;
             this.value2 = data2;

@@ -7,7 +7,7 @@
         FunctionCall
     }
 
-    public interface IValueProvider
+    public interface IValue
     {
         ValueType Type { get; }
     }

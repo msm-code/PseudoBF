@@ -44,7 +44,7 @@ namespace PseudoBF.Parsing
                 {
                     ValueList args = new ValueList();
                     for (int i = 0; i < node.ChildCount; i++)
-                    { args.Values.Add((IValueProvider)GetProgramElement(node.GetChild(i))); }
+                    { args.Values.Add((IValue)GetProgramElement(node.GetChild(i))); }
                     return args;
                 }
 
@@ -67,7 +67,7 @@ namespace PseudoBF.Parsing
                 case PseudoBFParser.ASSIGN_IMAG:
                 {
                     VariableName dest = new VariableName(node.GetChild(0).Text);
-                    IValueProvider source = (IValueProvider)GetProgramElement(node.GetChild(1));
+                    IValue source = (IValue)GetProgramElement(node.GetChild(1));
                     return new Assignment(source, dest);
                 }
 
@@ -92,21 +92,21 @@ namespace PseudoBF.Parsing
                 case PseudoBFParser.OPERATOR_CALL_IMAG:
                 {
                     string opName = node.GetChild(0).Text;
-                    List<IValueProvider> parameters = new List<IValueProvider>();
-                    parameters.Add((IValueProvider)GetProgramElement(node.GetChild(1)));
-                    parameters.Add((IValueProvider)GetProgramElement(node.GetChild(2)));
+                    List<IValue> parameters = new List<IValue>();
+                    parameters.Add((IValue)GetProgramElement(node.GetChild(1)));
+                    parameters.Add((IValue)GetProgramElement(node.GetChild(2)));
                     return new Call(opName, parameters);
                 }
 
                 case PseudoBFParser.RETURN_IMAG:
                 {
-                    IValueProvider value = (IValueProvider)GetProgramElement(node.GetChild(0));
+                    IValue value = (IValue)GetProgramElement(node.GetChild(0));
                     return new Return(value);
                 }
 
                 case PseudoBFParser.IF_IMAG:
                 {
-                    IValueProvider value = (IValueProvider)GetProgramElement(node.GetChild(0));
+                    IValue value = (IValue)GetProgramElement(node.GetChild(0));
                     CodeBlock code = (CodeBlock)GetProgramElement(node.GetChild(1));
                     CodeBlock codeElse;
                     if (node.ChildCount > 2) { codeElse = (CodeBlock)GetProgramElement(node.GetChild(2)); }
@@ -122,7 +122,7 @@ namespace PseudoBF.Parsing
 
                 case PseudoBFParser.WHILE_IMAG:
                 {
-                    IValueProvider value = (IValueProvider)GetProgramElement(node.GetChild(0));
+                    IValue value = (IValue)GetProgramElement(node.GetChild(0));
                     CodeBlock code = (CodeBlock)GetProgramElement(node.GetChild(1));
                     While w = new While(value, code);
 

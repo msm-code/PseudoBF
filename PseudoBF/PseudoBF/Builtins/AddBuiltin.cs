@@ -8,11 +8,11 @@ namespace PseudoBF.Builtins
 {
     public class AddBuiltin : IOperation
     {
-        IValueProvider value1;
-        IValueProvider value2;
+        IValue value1;
+        IValue value2;
         StackFrame stack;
 
-        public AddBuiltin(IValueProvider var1, IValueProvider var2, StackFrame stack)
+        public AddBuiltin(IValue var1, IValue var2, StackFrame stack)
         {
             this.value1 = var1;
             this.value2 = var2;

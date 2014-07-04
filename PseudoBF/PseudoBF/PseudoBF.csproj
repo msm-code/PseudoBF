@@ -70,7 +70,7 @@
     <Compile Include="Compilation\IfHelper.cs" />
     <Compile Include="LowLevelActions\ConditionalExecutionActions.cs" />
     <Compile Include="LowLevelActions\PrimitiveActions.cs" />
-    <Compile Include="MachineModel\HeadPosition.cs" />
+    <Compile Include="MachineModel\Location.cs" />
     <Compile Include="MachineModel\IMachine.cs" />
     <Compile Include="Parsing\AntlrWrapper.cs" />
     <Compile Include="Parsing\AssemblyInfo.cs" />

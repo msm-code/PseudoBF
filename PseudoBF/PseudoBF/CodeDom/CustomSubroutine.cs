@@ -27,7 +27,7 @@ namespace PseudoBF.CodeDom
             }
         }
 
-        public override void Compile(CompilerContext compiler, List<IValueProvider> parameters)
+        public override void Compile(CompilerContext compiler, List<IValue> parameters)
         {
             var executor = compiler.Executor;
             var frame = compiler.Stack.CurrentFrame;

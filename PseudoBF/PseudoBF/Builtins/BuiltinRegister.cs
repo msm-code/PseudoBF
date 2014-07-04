@@ -25,7 +25,7 @@ namespace PseudoBF.Builtins
         public static List<Subroutine> Subroutines
         { get { return builtins.Cast<Subroutine>().ToList(); } }
 
-        public static IOperation Get(string name, List<IValueProvider> parameters, StackFrame stack)
+        public static IOperation Get(string name, List<IValue> parameters, StackFrame stack)
         {
             return builtins.Find((x) => x.Name == name).Operation(parameters, stack);
         }

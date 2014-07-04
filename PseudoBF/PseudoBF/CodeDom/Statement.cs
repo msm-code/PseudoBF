@@ -24,13 +24,13 @@ namespace PseudoBF.CodeDom
 
     public class Assignment : Statement, ILinkable
     {
-        public Assignment(IValueProvider source, VariableName destination)
+        public Assignment(IValue source, VariableName destination)
         {
             this.Source = source;
             this.Destination = destination;
         }
 
-        public IValueProvider Source { get; private set; }
+        public IValue Source { get; private set; }
         public VariableName Destination { get; private set; }
 
         public override StatementType Type
@@ -45,25 +45,25 @@ namespace PseudoBF.CodeDom
         }
     }
 
-    public class Call : Statement, IValueProvider, ILinkable
+    public class Call : Statement, IValue, ILinkable
     {
         private string procName;
 
-        public Call(string procName, List<IValueProvider> parameters)
+        public Call(string procName, List<IValue> parameters)
         {
             this.procName = procName;
             this.Parameters = parameters;
         }
 
         public Subroutine Subroutine { get; private set; }
-        public List<IValueProvider> Parameters { get; private set; }
+        public List<IValue> Parameters { get; private set; }
 
         public override StatementType Type
         {
             get { return StatementType.Call; }
         }
 
-        ValueType IValueProvider.Type
+        ValueType IValue.Type
         {
             get { return ValueType.FunctionCall; }
         }
@@ -76,12 +76,12 @@ namespace PseudoBF.CodeDom
 
     public class Return : Statement
     {
-        public Return(IValueProvider value)
+        public Return(IValue value)
         {
             this.Value = value;
         }
 
-        public IValueProvider Value { get; private set; }
+        public IValue Value { get; private set; }
 
         public override StatementType Type
         {
@@ -91,21 +91,21 @@ namespace PseudoBF.CodeDom
 
     public class If : Statement, ILinkable
     {
-        public If(IValueProvider test, CodeBlock codeIf)
+        public If(IValue test, CodeBlock codeIf)
         {
             this.Test = test;
             this.CodeIf = codeIf;
             this.CodeElse = new CodeBlock(new List<Statement>());
         }
 
-        public If(IValueProvider test, CodeBlock codeIf, CodeBlock codeElse)
+        public If(IValue test, CodeBlock codeIf, CodeBlock codeElse)
         {
             this.Test = test;
             this.CodeIf = codeIf;
             this.CodeElse = codeElse;
         }
 
-        public IValueProvider Test { get; private set; }
+        public IValue Test { get; private set; }
         public CodeBlock CodeIf { get; private set; }
         public CodeBlock CodeElse { get; private set; }
 
@@ -129,13 +129,13 @@ namespace PseudoBF.CodeDom
 
     public class While : Statement, ILinkable
     {
-        public While(IValueProvider test, CodeBlock body)
+        public While(IValue test, CodeBlock body)
         {
             this.Test = test;
             this.Body = body;
         }
 
-        public IValueProvider Test { get; private set; }
+        public IValue Test { get; private set; }
         public CodeBlock Body { get; private set; }
 
         public override StatementType Type

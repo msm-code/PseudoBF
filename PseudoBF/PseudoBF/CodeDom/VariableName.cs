@@ -1,6 +1,6 @@
 ﻿namespace PseudoBF.CodeDom
 {
-    public class VariableName : IValueProvider
+    public class VariableName : IValue
     {
         static int unnamedVariables;
 

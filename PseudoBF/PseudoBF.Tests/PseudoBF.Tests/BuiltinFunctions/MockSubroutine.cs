@@ -13,7 +13,7 @@ namespace PseudoBF.Tests.BuiltinFunctions
         public static Subroutine Empty
         { get { return new MockSubroutine("MockSubroutine", new List<VariableName>()); } }
 
-        public override void Compile(CompilerContext compiler, List<IValueProvider> parameters)
+        public override void Compile(CompilerContext compiler, List<IValue> parameters)
         { throw new System.NotImplementedException(); }
     }
 }
