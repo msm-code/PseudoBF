@@ -70,3 +70,7 @@ After executing above code in any braunfuck interpreter, we get expected optput:
 ```
 Compare a to 5: not equal. Compare a to 7: equal.
 ```
+
+Note: this project is outdated. See also PseudoBF2 project, which is complete
+ground-up rewrite of this idea but better designed, more complete, and more extensible.
+https://github.com/msm-code/PseudoBF2
