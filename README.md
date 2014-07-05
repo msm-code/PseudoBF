@@ -65,7 +65,7 @@ And feed it into PseudoBF compiler, to get equivalent code... In brainfuck!
 ------------------------------------------------.--------------.<<<-]<<<<<<
 ```
 
-After executing above code in any braunfuck interpreter, we get expected optput:
+After executing above code in any brainfuck interpreter, we get expected optput:
 
 ```
 Compare a to 5: not equal. Compare a to 7: equal.
