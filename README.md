@@ -6,19 +6,19 @@ PseudoBF is simple language, that compiles to brainfuck itself. That is, you can
 ```
 function compare(varA, varB) {
      if (varA == varB) {
-         print(""equal. "");
+         print("equal. ");
      } else { 
-         print(""not equal. "");
+         print("not equal. ");
      }
 }
 
 function main() : locals(a, b, c) {
     a = 7;
 
-    print(""Compare a to 5: "");
+    print("Compare a to 5: ");
     compare(a, 5);
 
-    print(""Compare a to 7: "");
+    print("Compare a to 7: ");
     compare(a, 7);
 }
 ```
